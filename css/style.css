@@ -1,0 +1,419 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+
+*, *::after, *::before {
+    box-sizing: border-box;
+    font-family: 'PT Sans', sans-serif;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    /* background-image: linear-gradient(135deg, #FAD7A1 10%, #E96D71 100%); */
+    /* background-image: linear-gradient(135deg, #F97794 10%, #623AA2 100%); */
+    /* background-image: linear-gradient(135deg, #43CBFF 10%, #9708CC 100%); */
+    /* background-image: linear-gradient(135deg, #52E5E7 10%, #130CB7 100%); */
+    /* background-image: linear-gradient(135deg, #F05F57 10%, #360940 100%); */
+    /* background-color: rgb(19, 19, 19); */
+    background-image: url(../kepek/hatter.jpg);
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    /* overflow: hidden; */
+
+}
+
+.valaszto {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(128, 128, 128, 0.);
+    width: 80%;
+    height: 80%;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px black;
+    z-index: 1;
+
+}
+
+.blur {
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(4px);
+    box-shadow: 0px 0px 0px black;
+    background-color: rgb(0, 0, 0, 0.3);
+}
+
+.menu {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    background-color: rgba(128, 128, 128, 0.);
+    height: 100%;
+    width: 20%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    display: flex;
+    align-items: top;
+    justify-content: start;
+    flex-wrap: wrap;
+    gap: 0px;
+    align-content: flex-start;
+    z-index: 10;
+
+}
+
+.menupont {
+    row-gap: 0px;
+    width: 100%;
+    height: 60px;
+    background-color: rgba(128, 128, 128, 0);
+    /* border: 1px solid black; */
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 60px;
+    cursor: pointer;
+    user-select: none;
+    transition: all 500ms;
+    display: flex;
+    vertical-align: middle;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.program {
+    row-gap: 0px;
+    width: 100%;
+    height: 60px;
+    background-color: rgba(128, 128, 128, 0);
+    /* border: 1px solid black; */
+    /* color: white; */
+    text-align: center;
+    line-height: 60px;
+    cursor: pointer;
+    user-select: none;
+    transition: all 500ms;
+}
+
+.kiemelt {
+    row-gap: 0px;
+    width: 100%;
+    height: 60px;
+    /* background-color: rgb(255, 0, 0); */
+    background-color: rgba(128, 128, 128, 0.4);
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 60px;
+    cursor: pointer;
+    user-select: none;
+    transition: border-radius 00ms 100ms, top 300ms;
+    position: absolute;
+    z-index: -100;
+    top: 0;
+    left: 0;
+    /* clip-path: polygon(100% 25%, 85% 25%, 85% 50%, 70% 50%, 70% 75%, 55% 75%, 55% 100%, 0 100%, 0 0, 100% 0); */
+
+}
+
+.maradek {
+    width: 100%;
+    background-color: rgba(255, 0, 0, 0);
+    height: calc(100% - 5 * 60px);
+    border-right: 1px solid black;
+}
+
+.balsarok {
+    border-top-left-radius: 20px;
+}
+
+.jobbhatar {
+    border-right: 1px solid black;
+}
+
+.masodikhely {
+    top: 60px;
+}
+
+.harmadikhely {
+    top: 120px;
+}
+
+.negyedikhely {
+    top: 180px;
+}
+
+.otodikhely {
+    top: 240px;
+}
+
+.hatodikhely {
+    top: 300px;
+}
+
+.pontok {
+    background-color: red;
+
+}
+
+.menupont:first-child {
+    border-top-left-radius: 20px;
+}
+
+.ikon {
+    display: inline-block;
+
+}
+
+.menuszoveg {
+    padding: 5px;
+}
+
+.menu2 {
+    left: 0%;
+    position: absolute;
+    color: rgba(255, 0, 0, 0);
+    z-index: -300;
+}
+
+.programok {
+    position: absolute;
+    /* background-color: brown; */
+    left: 0%;
+    border-radius: 0%;
+    width: 20%;
+    animation: programlista 0.3s linear;
+    animation-fill-mode: forwards;
+
+    height: 100%;
+    border-right: 1px solid black;
+    display: block;
+    color: white;
+    z-index: -200;
+}
+
+.hidden {
+    animation: programlista2 0.3s linear;
+}
+
+.kiemelt2 {
+    opacity: 0;
+    position: absolute;
+}
+
+.programok .kiemelt2 {
+    opacity: 1;
+}
+
+.tartalom {
+    position: absolute;
+    width: 80%;
+    /* background-color: rgba(255, 0, 0, 0.384); */
+    height: 100%;
+    right: 0;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    /* display: none; */
+    z-index: -20120;
+    transition: top 300ms linear;
+}
+
+.tartalom2 {
+    top: 100%;
+    /* background-color: rgba(0, 255, 255, 0.219); */
+
+}
+
+.tartalom3 {
+    top: 200%;
+    /* background-color: rgba(38, 0, 255, 0.342); */
+    overflow-x: hidden;
+    overflow-y: auto;
+
+}
+
+.tartalom4 {
+    top: 700%;
+    /* background-color: rgba(255, 0, 242, 0.342); */
+
+}
+
+/* .aktualis {
+    top: 0%;
+    display: block;
+} */
+
+.prog {
+    position: absolute;
+    width: 60%;
+    /* background-color: rgba(255, 0, 0, 0.432); */
+    height: 100%;
+    right: 0;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    /* display: none; */
+    z-index: -20120;
+    transition: top 300ms linear;
+}
+
+.mohacs {
+    top: 400%;
+    overflow: auto;
+}
+
+.becs {
+    top: 500%;
+}
+
+.london {
+    top: 600%;
+}
+
+.overcucc {
+    overflow: hidden;
+}
+
+.kartya {
+    width: 95%;
+    /* height: 300px; */
+    background-color: rgba(255, 0, 0, 0);
+    margin: auto;
+    margin-top: 30px;
+    border: 1px solid black;
+}
+
+hr {
+    border: 1px solid grey;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h4 {
+    font-size: 25px;
+}
+
+a {
+    color: white;
+    text-decoration: underline;
+    font-size: 25px;
+}
+
+a:hover {
+    color: white;
+    font-style: italic;
+    font-weight: 600;
+
+}
+
+ul {
+    color: #fff;
+}
+
+p {
+    text-align: justify;
+    color: white;
+}
+
+h1, h2, h3, h4, h5 {
+    color: white;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+@keyframes programlista {
+    0% {}
+
+    75% {
+        left: 0%;
+    }
+
+    100% {
+        left: 20%;
+    }
+}
+
+@keyframes programlista2 {
+    0% {
+        left: 20%
+    }
+
+    75% {
+        left: 20%;
+    }
+
+    100% {
+        left: 0%;
+    }
+}
+
+
+@media only screen and (max-width: 500px) {
+    .menuszoveg {
+        display: none;
+    }
+
+    .tartalom {
+        width: 85%;
+    }
+
+    .ikon {
+        font-size: 1.5em;
+    }
+
+    .prog {
+        width: 65%;
+    }
+
+    .menu {
+        width: 15%;
+    }
+
+    .programok {
+        left: 15%;
+        width: 20%;
+    }
+
+    @keyframes programlista {
+        0% {}
+
+        100% {
+            left: 15%;
+        }
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .menupont {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .menuszoveg {
+        padding-top: 5px;
+        height: 50%;
+        line-height: 50%;
+    }
+
+    .ikon {
+        padding: 0;
+        height: 50%;
+    }
+}
