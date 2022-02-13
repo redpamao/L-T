@@ -120,3 +120,23 @@ program3.addEventListener("click", () => {
     london.style.top = "0%"
     tartalom4.style.top = "100%"
 })
+const hatter = document.querySelector(".hatter")
+// hatter.style.background = "url(./Képek/hatter.jpg)"
+var kepek = ["hatter.jpg", "hatter2.jpg", "hatter3.jpg"],
+    base = "./Képek/",
+    secs = 4;
+
+
+
+function backgroundSequence() {
+    window.clearTimeout();
+    var k = 0;
+    for (i = 0; i < kepek.length; i++) {
+        setTimeout(function () {
+            hatter.style.background = "url(" + base + kepek[k] + ") no-repeat center center fixed";
+            hatter.style.backgroundSize = "cover";
+            if ((k + 1) === kepek.length) { setTimeout(function () { backgroundSequence() }, (secs * 1000)) } else { k++; }
+        }, (secs * 1000) * i)
+    }
+}
+backgroundSequence();
