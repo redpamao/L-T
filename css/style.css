@@ -130,7 +130,7 @@ body {
     transition: border-radius 00ms 100ms, top 300ms;
     position: absolute;
     z-index: -100;
-    top: 0;
+    top: 60px;
     left: 0;
     /* clip-path: polygon(100% 25%, 85% 25%, 85% 50%, 70% 50%, 70% 75%, 55% 75%, 55% 100%, 0 100%, 0 0, 100% 0); */
 
@@ -234,12 +234,12 @@ body {
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     /* display: none; */
-    z-index: -20120;
+    z-index: 20120;
     transition: top 300ms linear;
 }
 
 .tartalom2 {
-    top: 100%;
+    top: 0%;
     /* background-color: rgba(0, 255, 255, 0.219); */
 
 }
